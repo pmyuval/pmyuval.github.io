@@ -1,0 +1,86 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4ede4; /* Soft beige for fall */
+    color: #4a3227; /* Dark brown for text */
+    line-height: 1.6;
+    padding: 20px;
+    direction: rtl; /* Right-to-left text direction */
+    text-align: right;
+}
+
+/* Header styling */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #b85c38; /* Burnt orange */
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #6e3b23; /* Deep brownish-orange */
+    text-align: right;
+    margin-bottom: 10px;
+}
+
+/* Links */
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Arrange links horizontally */
+    justify-content: space-around; /* Space links evenly */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+li {
+    margin: 10px 0;
+}
+
+li a {
+    display: block;
+    padding: 10px;
+    background-color: #d9b38c; /* Light brown */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    min-width: 100px; /* Ensure consistent sizing */
+    color: #4a3227; /* Dark text color */
+}
+
+li a:hover {
+    background-color: #b85c38;
+    color: #fff;
+}
+
+/* Special styling for the last link */
+li:last-child a {
+    background-color: #a04b33; /* Dark reddish-brown */
+    color: #fff;
+}
+
+li:last-child a:hover {
+    background-color: #6e3b23; /* Deep brownish-orange */
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    li a {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+}
