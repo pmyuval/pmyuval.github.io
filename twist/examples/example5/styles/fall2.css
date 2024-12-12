@@ -63,6 +63,7 @@ li a:hover {
 li:last-child a {
     background-color: #a04b33; /* Dark reddish-brown */
     color: #fff;
+    font-family: dragon-hebrew; /* Use custom font */
 }
 
 li:last-child a:hover {
@@ -83,4 +84,10 @@ li:last-child a:hover {
         padding: 8px;
         font-size: 0.9em;
     }
+}
+
+/* add my own dragon hebrew font */
+@font-face {
+    font-family: 'dragon-hebrew';
+    src: url('dragon-webfont.ttf') format('truetype');
 }
