@@ -1,5 +1,4 @@
-let isLocked = true;
-let contentCounter = 0;
+
 let colorIndex = 0;
 const colors = [
     '#2E7D32', // ירוק כהה
@@ -73,18 +72,3 @@ function unLock(){
 
 }
 
-function addParameters(a, b){
-    console.log("function1" + a + b);
-}
-
-function addStrings(){
-    let a = "hello";
-    let b = "world";
-    addParameters(a, b);
-}
-
-function addNumbers(){
-    let a = 5;
-    let b = 7;
-    addParameters(a, b);
-}
