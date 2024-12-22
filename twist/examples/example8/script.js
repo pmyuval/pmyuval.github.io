@@ -10,31 +10,31 @@ const colors = [
 ];
 
 //פונקציה שמחזירה מחרוזת, לשימוש בדוגמאות: 1, 2, 3, 5, 7
-function textExample() {
-    return "מחרוזת עליזה";
+function textExample(moreText) {
+    return "מחרוזת עליזה " + moreText;
 }
 
 // פונקציה שמקפיצה התראה עבור דוגמאות: 1, 3
 function showAlert() {
-    alert("זוהי התראה! " + textExample());
+    alert(textExample("התראה! "));
 }
 
 // פונקציה שמדפיסה ללוג עבור דוגמאות: 2
 function logMessage() {
-    console.log("Div2: " + textExample());
+    console.log(textExample("div2"));
 }
 
 
 // פונקציה שמציגה תאריך עבור דוגמא 4
 function showDate() {
     
-    console.log("Div4: זה התאריך" + Date());
+    console.log("div4: זה התאריך" + Date());
 }
 
 // פונקציה שמשנה תוכן של אלמנט עבור דוגמא 5
 function changeContent() {
     
-    document.getElementById("div5").innerHTML = textExample();
+    document.getElementById("div5").innerHTML = textExample("div5");
 }
 
 // פונקציה שמשנה את הצבע של כפתור עבור דוגמא 6
