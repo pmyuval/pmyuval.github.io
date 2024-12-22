@@ -72,3 +72,19 @@ function unLock(){
     console.log("המנעול נפתח!");
 
 }
+
+function addParameters(a, b){
+    console.log("function1" + a + b);
+}
+
+function addStrings(){
+    let a = "hello";
+    let b = "world";
+    addParameters(a, b);
+}
+
+function addNumbers(){
+    let a = 5;
+    let b = 7;
+    addParameters(a, b);
+}
