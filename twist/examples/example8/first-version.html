@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <title>עמוד אינטראקטיבי</title>
+    <style>
+        .div-style {
+            margin: 10px;
+            padding: 20px;
+            border: 2px solid black;
+            cursor: pointer;
+            text-align: center;
+        }
+        .door {
+            width: 100px;
+            height: 200px;
+            background-color: brown;
+            margin: 10px;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            transition: transform 0.5s;
+        }
+        .door.open {
+            transform: perspective(500px) rotateY(45deg);
+        }
+        .lock {
+            width: 50px;
+            height: 70px;
+            background-color: gray;
+            border-radius: 10px;
+            margin: 10px;
+            cursor: pointer;
+            position: relative;
+        }
+        .lock::after {
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 20px;
+            background-color: gray;
+            top: -10px;
+            left: 10px;
+            border-radius: 20px 20px 0 0;
+        }
+        .lock.open::after {
+            transform: rotate(30deg);
+            transform-origin: bottom right;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1" class="div-style" onclick="showAlert()">
+        לחץ עליי לקבלת התראה
+    </div>
+
+    <div id="div2" class="div-style" onclick="logMessage()">
+        לחץ עליי להדפסה ל-console
+    </div>
+
+    <div id="div3" class="div-style" onmouseover="showAlert()">
+        עבור עליי עם העכבר לקבלת התראה
+    </div>
+
+    <div id="div4" class="div-style" onclick="showDate()">
+        לחץ עליי להצגת התאריך
+    </div>
+
+    <div id="div5" class="div-style" onclick="changeContent()">
+        לחץ עליי לשינוי התוכן
+    </div>
+
+    <div id="div6" class="div-style" onclick="changeColor()">
+        לחץ עליי לשינוי הצבע
+    </div>
+
+    <div id="div7" class="div-style" onclick="addElements()">
+        לחץ עליי להוספת אלמנטים
+    </div>
+
+    <div id="div8" class="door" onclick="tryOpenDoor()">
+        לפתוח את הדלת
+    </div>
+
+    <div id="div9" class="lock" onclick="toggleLock()"></div>
+
+    <script>
+        let isLocked = true;
+        let contentCounter = 0;
+        let colorIndex = 0;
+        const colors = ['red', 'blue', 'green', 'purple', 'orange'];
+        
+        function showAlert() {
+            alert("זוהי התראה!");
+        }
+
+        function logMessage() {
+            console.log("הודעה נרשמה ב-console");
+        }
+
+        function showDate() {
+            const currentDate = new Date();
+            console.log("div4: זה התאריך", currentDate);
+        }
+
+        function changeContent() {
+            const contents = [
+                "תוכן חדש 1",
+                "תוכן חדש 2",
+                "תוכן חדש 3",
+                "תוכן חדש 4"
+            ];
+            document.getElementById("div5").innerText = contents[contentCounter % contents.length];
+            contentCounter++;
+        }
+
+        function changeColor() {
+            document.getElementById("div6").style.backgroundColor = colors[colorIndex % colors.length];
+            colorIndex++;
+        }
+
+        function addElements() {
+            if (!document.getElementById("div8")) {
+                const div8 = document.createElement("div");
+                div8.id = "div8";
+                div8.className = "door";
+                div8.onclick = tryOpenDoor;
+                div8.innerText = "לפתוח את הדלת";
+                document.body.appendChild(div8);
+
+                const div9 = document.createElement("div");
+                div9.id = "div9";
+                div9.className = "lock";
+                div9.onclick = toggleLock;
+                document.body.appendChild(div9);
+            }
+        }
+
+        function tryOpenDoor() {
+            if (!isLocked) {
+                document.getElementById("div8").classList.add("open");
+                document.getElementById("div8").innerText = "הדלת נפתחה!";
+            }
+        }
+
+        function toggleLock() {
+            isLocked = !isLocked;
+            const lockElement = document.getElementById("div9");
+            if (!isLocked) {
+                lockElement.classList.add("open");
+            } else {
+                lockElement.classList.remove("open");
+            }
+        }
+    </script>
+</body>
+</html>

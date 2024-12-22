@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html dir="rtl">
+<head>
+    <title>עמוד אינטראקטיבי</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h2 class="section-title">פעולות אפשריות</h2>
+    <div class="row">
+        <div id="div1" class="div-style">
+            <h3 class="example-title">דוגמא 1</h3>
+            <p class="example-description">הצגת התראה (Alert) בלחיצה על כפתור</p>
+            <div class="action-button" onclick="showAlert()">לחץ להצגת התראה</div>
+        </div>
+
+        <div id="div2" class="div-style">
+            <h3 class="example-title">דוגמא 2</h3>
+            <p class="example-description">הדפסת הודעה ל-Console בלחיצה</p>
+            <div class="action-button" onclick="logMessage()">לחץ להדפסה ל-Console</div>
+        </div>
+
+        <div id="div3" class="div-style">
+            <h3 class="example-title">דוגמא 3</h3>
+            <p class="example-description">הצגת התראה במעבר עכבר מעל הכפתור</p>
+            <div class="action-button" onmouseover="showAlert()">עבור עם העכבר להתראה</div>
+        </div>
+
+        <div id="div4" class="div-style">
+            <h3 class="example-title">דוגמא 4</h3>
+            <p class="example-description">הצגת התאריך הנוכחי ב-Console</p>
+            <div class="action-button" onclick="showDate()">לחץ להצגת התאריך</div>
+        </div>
+    </div>
+
+    <h2 class="section-title">שינוי בדום</h2>
+    <div class="row">
+        <div id="div5" class="div-style">
+            <h3 class="example-title">דוגמא 5</h3>
+            <p class="example-description">שינוי תוכן הטקסט בלחיצה על הכפתור</p>
+            <div class="action-button" onclick="changeContent()">לחץ לשינוי התוכן</div>
+        </div>
+
+        <div id="div6" class="div-style">
+            <h3 class="example-title">דוגמא 6</h3>
+            <p class="example-description">שינוי צבע הרקע בלחיצה על הכפתור</p>
+            <div id="change-color-button" class="action-button" onclick="changeColor()">לחץ לשינוי הצבע</div>
+        </div>
+
+        <div id="div7" class="div-style">
+            <h3 class="example-title">דוגמא 7</h3>
+            <p class="example-description">הוספת אלמנטים חדשים לדף</p>
+            <div class="action-button" onclick="showElements()">לחץ להוספת אלמנטים</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="door-container" id="door-lock-container">
+            <div id="div8" class="door">
+                לפתוח את הדלת
+            </div>
+            <div id="div9" class="lock" onclick="unLock()"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
