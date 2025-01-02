@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Score Tracker</title>
-    <script src="score.js" defer></script>
+    <script src="scoreTracker.js" defer></script>
     <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
     <h1>Interactive Score Tracker</h1>
     <div id="score">10</div>
-    <div id="add1" class="button" onclick="updateScore()">Add 1 Point</div>
-    <div id="add2" class="button" onclick="">Add 2 Points</div>
-    <div id="subtruct2" class="button" onclick="">Subtruct 2 Points</div>
+    <div id="add1" class="button" onclick="updateScore(1)">Add 1 Point</div>
+    <div id="add2" class="button" onclick="updateScore(2)">Add 2 Points</div>
+    <div id="subtruct2" class="button" onclick="updateScore(-2)">Subtruct 2 Points</div>
 </body>
 </html>
