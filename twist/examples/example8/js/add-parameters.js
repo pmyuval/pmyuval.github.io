@@ -1,5 +1,5 @@
 function addParameters(a, b){
-    console.log("Results: " + a + b);
+    console.log("Results: " + (a + b));
 }
 
 function addStrings(){
