@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			Garden
+		</title>
+		<script>
+		function takeKey()
+		{
+			sessionStorage.setItem("key","taken");			
+			console.log("Key is taken");
+			document.getElementById("keyavailable").style.display = "none";
+		}
+
+        function takePillow(){
+            sessionStorage.setItem("pillow","have");
+            console.log("Pillow is haven");
+            document.getElementById("pillowavailable").style.display = "none";
+        }
+		
+		</script>
+	</head>
+<body>
+<h1> Garden </h1>
+<h2> You are in the garden </h2>
+
+<div id="keyavailable"> 
+	You see a key.<br>
+	<a href="#" onclick="takeKey()">Pick up key</a>
+	<br><br>
+</div>
+
+<div id="pillowavailable"> 
+	You see a pillow.<br>
+	<a href="#" onclick="takePillow()">Pick up pillow</a>
+	<br><br>
+</div>
+
+<div id="garden"> 
+	<a href="puzzle_door.html">Go to door</a>
+	<br><br>
+</div>
+</body>
+</html>
+
+
+
+</body>
+</html>
