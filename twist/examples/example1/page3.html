@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>HTML + CSS + JS</title>
+  <!-- חיבור לקובץ העיצוב -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="mode-bar">
+    <a href="page1.html" class="mode-btn"> רק HTML</a>
+    <a href="page2.html" class="mode-btn"> HTML + CSS</a>
+    <a href="page3.html" class="mode-btn active"> HTML + CSS + JS</a>
+  </div>
+
+  <h1>מבוא ליצירה אינטראקטיבית ברשת</h1>
+
+  <div id="content-container">
+    <p id="p1" class="text-card">
+      <strong>פסקה 1: </strong><br>
+      זהו תוכן של פסקה ראשונה להדגמה.
+    </p>
+
+    <p id="p2" class="text-card">
+      <strong>פסקה 2:</strong><br>
+      תוכן נוסף עבור פסקה שניה בהדגמה.
+    </p>
+
+    <p id="p3" class="text-card">
+      <strong>פסקה 3:</strong><br>
+      תוכן של הפסקה האחרונה.
+    </p>
+  </div>
+
+  <div class="nav-bar">
+    <!-- שימי לב: כאן הכפתורים מפעילים את הפונקציה changeSlide -->
+    <button id="btn-prev" onclick="changeSlide(-1)">הקודם</button>
+    <button id="btn-next" onclick="changeSlide(1)">הבא</button>
+  </div>
+
+  <!-- חיבור לקובץ הסקריפט (רק בקובץ הזה) -->
+  <script src="script.js"></script>
+</body>
+</html>
