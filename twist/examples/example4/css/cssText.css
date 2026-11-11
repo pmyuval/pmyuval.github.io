@@ -1,0 +1,23 @@
+h1 {
+    width: 70%;
+    color: white;
+    background-color: blue;
+    font-family: Impact, Arial, Courier;
+    font-style: italic;
+    text-align: center;
+    line-height: 300%
+}
+
+h2 {
+    color: #ff0000;
+    font-family: Arial, Courier;
+    font-style: normal;
+    font-variant: small-caps;
+    font-size: 15px;
+    text-align: left;
+}
+
+p {
+    text-align: right;
+    width: 50%;
+}
