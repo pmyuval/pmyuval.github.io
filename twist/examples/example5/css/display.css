@@ -1,0 +1,15 @@
+div {
+    border: 1px dashed black;
+}
+
+div.inline {
+    display: inline;
+}
+
+div.block {
+    display: block;
+}
+
+div.inlineblock {
+    display: inline-block;
+}

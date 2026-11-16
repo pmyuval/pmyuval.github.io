@@ -1,0 +1,27 @@
+div {
+    border: 1px dashed black;
+    display: inline;
+}
+
+div.relatboy {
+    position: relative;
+    left: 50px;
+    top: 100px;
+}
+
+div.absboy {
+    position: absolute;
+    left: 250px;
+    top: 200px;
+}
+
+div.fixboy {
+    position: fixed;
+    left: 350px;
+    top: 300px;
+}
+
+div.stickboy {
+    position: sticky;
+    top: 0px;
+}
