@@ -1,0 +1,36 @@
+div.moveRight {
+	
+	width: 100px;
+    height: 100px;
+    margin: 10px;
+	background-color: red;
+    position: relative;
+	left:200px;
+	top: 0px;
+    animation-name: moveright;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;  
+	
+}
+
+@keyframes moveright {
+    0%   {left:0px;  }
+    100% {left:200px; }
+}
+
+
+div.moveRight2 {
+	
+	width: 100px;
+    height: 100px;
+	margin: 10px;
+    background-color: blue;
+    position: relative;
+	left:-150px;
+	top: 200px;
+    animation-name: moveright;
+	animation-delay: 3s;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;  
+	
+}

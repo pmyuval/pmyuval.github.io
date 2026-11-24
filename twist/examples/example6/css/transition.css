@@ -1,0 +1,41 @@
+
+
+div.special{
+    width: 100px;
+    height: 100px;
+	margin: 10px;
+	border-color: green;
+	border-width: 2px;
+	border-style: dotted;
+    background: red;
+    transition: all 5s;
+    -webkit-transition: width 2s; /* Safari 3.1 to 6.0 */
+	
+}
+
+div.samerow {
+	display: inline-block;
+}
+
+div.special:hover {
+    width: 200px;	
+}
+
+div.special:active {
+	border-radius: 50px;
+	width: 100px;
+	background-color: blue;
+}
+
+div.inner {
+	display: none;
+	background-color: pink;
+}
+
+div.special:active div.inner{
+	display: block;	
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	font-size: 300%;
+}
